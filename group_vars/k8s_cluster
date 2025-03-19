@@ -13,7 +13,8 @@ dockerhubMirrorURLs:
 
 # Versions: 1.28 - 1.32.2
 # https://kubernetes.io/releases/
-kube_version: 1.32.2
+# kube_version: 1.32.2
+kube_version: 1.31.2
 
 kube_domain_name: cluster.local
 service_cidr: "10.233.0.0/18"
