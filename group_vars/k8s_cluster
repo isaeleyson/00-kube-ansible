@@ -38,7 +38,8 @@ cri_socket: unix:///var/run/crio/crio.sock
 # sandbox_image: "registry.k8s.io/pause:3.10"
 
 # Если используется crio, необходимо указать его версию.
-crio_version: v1.32
+# crio_version: v1.32
+crio_version: v1.31
 
 # Enable cri-o image volumes
 # https://github.com/cri-o/cri-o/blob/main/docs/crio.conf.5.md#crioimage-table
@@ -92,6 +93,9 @@ nodelocaldns_local_ip: 169.254.25.10
 # If you need disable HA, undefine ha_cluster_virtual_ip
 # ha_cluster_virtual_ip: 192.168.218.189
 # ha_cluster_virtual_port: 7443
+ha_cluster_virtual_ip: 192.168.218.189
+ha_cluster_virtual_port: 7443
+
 
 ############################################################
 ####  UTILS                                  ###############
