@@ -1,22 +1,28 @@
 k8s_masters:
   hosts:
     # Control nodes
-    control1.kryukov.local:
+    control1.corp.znamik.ru:
       ansible_host: 192.168.218.171
-    # control2.kryukov.local:
-    # control3.kryukov.local:
+    control2.corp.znamik.ru:
+      ansible_host: 192.168.218.172
+    control3.corp.znamik.ru:
+      ansible_host: 192.168.218.173
 k8s_workers:
   hosts:
     # Worker nodes
-    ws1.kryukov.local:
+    ws1.corp.znamik.ru:
       ansible_host: 192.168.218.174
-    ws2.kryukov.local:
+    ws2.corp.znamik.ru:
       ansible_host: 192.168.218.175
-    # ws3.kryukov.local:
-    #   ansible_host: 192.168.218.176
-    # ws4.kryukov.local:
+    ws3.corp.znamik.ru:
+      ansible_host: 192.168.218.176
+      # ws4.corp.znamik.ru:
     #   ansible_host: 192.168.218.177
 k8s_cluster:
   children:
     k8s_masters:
     k8s_workers:
+all:
+  vars:
+    ansible_ssh_private_key_file: "/home/anj/.ssh/HomeKube.id_rsa"
+

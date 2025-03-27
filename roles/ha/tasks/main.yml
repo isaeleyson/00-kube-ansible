@@ -33,8 +33,7 @@
 - name: Enable keepalived and haproxy
   ansible.builtin.service:
     name: "{{ item }}"
-    state: enabled
-    enabled: true
+    state: started
   with_items:
     - keepalived
     - haproxy

@@ -15,7 +15,7 @@ dockerhubMirrorURLs:
 # https://kubernetes.io/releases/
 kube_version: 1.32.2
 
-kube_domain_name: cluster.local
+kube_domain_name: corp.znamik.ru 
 service_cidr: "10.233.0.0/18"
 pod_network_cidr: "10.233.64.0/18"
 
@@ -89,8 +89,8 @@ nodelocaldns_local_ip: 169.254.25.10
 
 ## HA cluser
 # If you need disable HA, undefine ha_cluster_virtual_ip
-# ha_cluster_virtual_ip: 192.168.218.189
-# ha_cluster_virtual_port: 7443
+ha_cluster_virtual_ip: 192.168.218.189
+ha_cluster_virtual_port: 7443
 
 ############################################################
 ####  UTILS                                  ###############
@@ -151,7 +151,7 @@ argoCDChartVersion: "7.8.7"
 argoCDLoglevel: "info"
 argoCDControllerReplicaCount: 1
 argoCDServerReplicaCount: 1
-argoCDURL: "argocd.kryukov.local"
+argoCDURL: "argocd.corp.znamik.ru"
 ### -- Bcrypt hashed admin password
 ### Argo expects the password in the secret to be bcrypt hashed. You can create this hash with
 ### ARGO_PWD=password
